@@ -1,0 +1,148 @@
+/* Global Styles */
+:root {
+  --primary-color: #17a2b8;
+  --dark-color: #343a40;
+  --light-color: #f4f4f4;
+  --danger-color: #dc3545;
+  --success-color: #28a745;
+}
+
+body {
+  background-color: var(--light-color);
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+.hiddenElement {
+  display: none;
+}
+
+.contentWrapper {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+/* Navbar */
+
+nav {
+  position: sticky;
+  top: 0;
+}
+
+.elementWrapper {
+  width: 1fr;
+  background-color: var(--primary-color);
+  color: #fff;
+  display: flex;
+  height: 50px;
+  align-items: center;
+}
+
+.contentWrapper {
+  height: 200px;
+  margin: 0;
+  padding: 0;
+}
+
+.navbarElement {
+  padding: 0 10px;
+  font-size: 20px;
+  color: #eee;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.navbarElement:hover {
+  background-color: black;
+}
+
+.divideElement {
+  flex-grow: 1;
+  height: 100%;
+}
+
+.navbarElement > a {
+  color: #555;
+}
+.navbarElement > img {
+  margin-right: 10px;
+}
+
+img.navbarElement {
+  height: 25px;
+  padding-top: 12px;
+  padding-bottom: 13px;
+}
+
+.flags > img {
+  display: inline-block;
+}
+
+.hamburgerIcon {
+  display: none;
+}
+
+.selected {
+  text-decoration: underline;
+}
+
+/* navbar end */
+
+/* Horse Preview */
+
+.horseWrapper {
+  max-width: 1200px;
+  justify-self: center;
+}
+.horsePreview {
+  font-size: 2rem;
+  margin: 50px;
+  border: solid black 5px;
+}
+.right-side {
+  float: right;
+}
+
+/* Tablet */
+
+@media only screen and (max-width: 992px) {
+  .elementWrapper {
+    flex-direction: column;
+    overflow: hidden;
+    align-items: flex-start;
+  }
+
+  .navbarElement {
+    /* margin: 10px 0 0px 0; */
+    padding: 15px;
+  }
+
+  .hamburgerIcon {
+    display: inline;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    margin: 0;
+  }
+
+  .verticalElementWrapper {
+    height: 100%;
+  }
+  .horsePreview {
+    font-size: 1.5rem;
+    margin: 30px;
+  }
+}
+
+/* Mobile */
+
+@media (max-width: 768px) {
+  .horsePreview {
+    font-size: 1rem;
+    margin: 10px;
+  }
+}
