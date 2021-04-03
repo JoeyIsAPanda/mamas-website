@@ -29,6 +29,7 @@ a {
 .contentWrapper {
   display: grid;
   grid-template-columns: 1fr;
+  overflow: hidden;
 }
 
 /* Navbar */
@@ -36,6 +37,7 @@ a {
 nav {
   position: sticky;
   top: 0;
+  z-index: 1;
 }
 
 .elementWrapper {
@@ -54,6 +56,8 @@ nav {
   height: 100%;
   display: flex;
   align-items: center;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: 600;
 }
 
 .navbarElement:hover {
@@ -82,22 +86,47 @@ nav {
 /* Horse Preview */
 
 .horseWrapper {
-  max-width: 992px;
+  max-width: 1092px;
   justify-self: center;
 }
 .horsePreview {
   font-size: 2rem;
-  margin: 50px;
-  border: solid black 5px;
+  margin: 100px;
+  border: solid grey 2px;
+  border-radius: 10px;
 }
-.right-side {
+.horseProfilePic {
+  position: relative;
+  top: -60px;
+  height: 150px;
+  border-radius: 10px;
+}
+.right-side img {
   float: right;
   right: 50px;
 }
 
-.left-side {
+.left-side img {
+  float: left;
+  left: 50px;
+}
+
+.nameTag {
+  position: relative;
+}
+
+.left-side .nameTag {
   float: right;
   right: 50px;
+}
+
+.right-side .nameTag {
+  float: left;
+  left: 50px;
+}
+
+.horseDesc {
+  margin: 150px 5% 5% 5%;
 }
 
 /* Tablet */
@@ -110,7 +139,6 @@ nav {
   }
 
   .navbarElement {
-    /* margin: 10px 0 0px 0; */
     min-height: 80px;
   }
 
@@ -133,7 +161,8 @@ nav {
   }
   .horsePreview {
     font-size: 1.8rem;
-    margin: 30px;
+    margin-left: 30px;
+    margin-right: 30px;
   }
 }
 
@@ -142,6 +171,8 @@ nav {
 @media (max-width: 768px) {
   .horsePreview {
     font-size: 1.5rem;
-    margin: 10px;
+
+    margin-left: 10px;
+    margin-right: 10px;
   }
 }

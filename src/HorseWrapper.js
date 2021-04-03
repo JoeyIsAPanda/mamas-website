@@ -1,6 +1,5 @@
 import React from "react";
 import HorsePreview from "./HorsePreview";
-import placeholder from "./img/placeholder-horse.jpeg";
 import duci from "./img/Duci.jpg";
 import arber from "./img/Arber.png";
 
@@ -31,7 +30,7 @@ const HorseWrapper = () => {
       {horseProfiles.map(({ name, image, description }, index) => {
         return (
           <HorsePreview
-            side={index % 2}
+            odd={index % 2}
             image={image}
             name={name}
             description={description}

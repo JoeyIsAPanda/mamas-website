@@ -1,19 +1,19 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-const HorsePreview = ({ side, image, name, description }) => {
+const HorsePreview = ({ odd, image, name, description }) => {
   return (
-    <div className="horsePreview">
+    <div className={`horsePreview ${odd ? "left-side" : "right-side"}`}>
       <Link to={`/${name}`}>
         <img
+          className=""
           src={image}
           height="100px"
-          className={side ? "left-side" : "right-side"}
+          className={`horseProfilePic `}
           alt={name}
         />
-        Name: {name}
-        <br />
-        {description}
+        <h2 className="nameTag">{name}, 21</h2>
+        <p className="horseDesc">{description}</p>
       </Link>
     </div>
   );
