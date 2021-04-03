@@ -2,9 +2,14 @@
 :root {
   --primary-color: #17a2b8;
   --dark-color: #343a40;
-  --light-color: #f4f4f4;
+  --light-color: #fff;
   --danger-color: #dc3545;
   --success-color: #28a745;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
 body {
@@ -14,6 +19,7 @@ body {
 
 a {
   text-decoration: none;
+  color: black;
 }
 
 .hiddenElement {
@@ -37,19 +43,13 @@ nav {
   background-color: var(--primary-color);
   color: #fff;
   display: flex;
-  height: 50px;
+  height: 80px;
   align-items: center;
 }
 
-.contentWrapper {
-  height: 200px;
-  margin: 0;
-  padding: 0;
-}
-
 .navbarElement {
-  padding: 0 10px;
-  font-size: 20px;
+  padding: 0 20px;
+  font-size: 2rem;
   color: #eee;
   height: 100%;
   display: flex;
@@ -68,19 +68,6 @@ nav {
 .navbarElement > a {
   color: #555;
 }
-.navbarElement > img {
-  margin-right: 10px;
-}
-
-img.navbarElement {
-  height: 25px;
-  padding-top: 12px;
-  padding-bottom: 13px;
-}
-
-.flags > img {
-  display: inline-block;
-}
 
 .hamburgerIcon {
   display: none;
@@ -95,7 +82,7 @@ img.navbarElement {
 /* Horse Preview */
 
 .horseWrapper {
-  max-width: 1200px;
+  max-width: 992px;
   justify-self: center;
 }
 .horsePreview {
@@ -105,6 +92,12 @@ img.navbarElement {
 }
 .right-side {
   float: right;
+  right: 50px;
+}
+
+.left-side {
+  float: right;
+  right: 50px;
 }
 
 /* Tablet */
@@ -118,7 +111,12 @@ img.navbarElement {
 
   .navbarElement {
     /* margin: 10px 0 0px 0; */
-    padding: 15px;
+    min-height: 80px;
+  }
+
+  .navbarElement:hover {
+    background-color: var(--primary-color);
+    color: white;
   }
 
   .hamburgerIcon {
@@ -127,13 +125,14 @@ img.navbarElement {
     top: 0px;
     right: 0px;
     margin: 0;
+    height: 80px;
   }
 
   .verticalElementWrapper {
     height: 100%;
   }
   .horsePreview {
-    font-size: 1.5rem;
+    font-size: 1.8rem;
     margin: 30px;
   }
 }
@@ -142,7 +141,7 @@ img.navbarElement {
 
 @media (max-width: 768px) {
   .horsePreview {
-    font-size: 1rem;
+    font-size: 1.5rem;
     margin: 10px;
   }
 }

@@ -10,7 +10,8 @@ const HorseWrapper = () => {
       name: "Black Beauty",
       description:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam repudiandae adipisci officiis quod laboriosam odio aliquam officia repellendus dolore. Neque.",
-      image: placeholder,
+      image:
+        "https://mamas-website.s3.us-west-000.backblazeb2.com/placeholder-horse.jpeg",
     },
     {
       name: "Arber",

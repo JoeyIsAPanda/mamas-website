@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink, Link } from "react-router-dom";
 import hamburger from "./img/hamburger.webp";
 
 export const Navbar = () => {
@@ -15,6 +15,9 @@ export const Navbar = () => {
         }`}
         id="elementWrapper"
       >
+        <Link className="navbarElement" to="/home">
+          Strerath
+        </Link>
         <NavLink
           activeClassName="selected"
           className="navbarElement"
@@ -40,17 +43,19 @@ export const Navbar = () => {
         <NavLink
           activeClassName="selected"
           className="navbarElement"
+          to="/kontakt"
+        >
+          Kontakt
+        </NavLink>
+        <NavLink
+          activeClassName="selected"
+          className="navbarElement"
           to="/impressum"
         >
           Impressum
         </NavLink>
       </div>
-      <img
-        className="navbarElement hamburgerIcon"
-        src={hamburger}
-        alt=""
-        onClick={toggler}
-      />
+      <img className="hamburgerIcon" src={hamburger} alt="" onClick={toggler} />
     </nav>
   );
 };
