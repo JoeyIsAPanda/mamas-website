@@ -4,9 +4,8 @@ import { Link } from "react-router-dom";
 const HorsePreview = ({ odd, image, name, description }) => {
   return (
     <div className={`horsePreview ${odd ? "left-side" : "right-side"}`}>
-      <Link to={`/${name}`}>
+      <Link to={`/pferde/${name}`}>
         <img
-          className=""
           src={image}
           height="100px"
           className={`horseProfilePic `}
