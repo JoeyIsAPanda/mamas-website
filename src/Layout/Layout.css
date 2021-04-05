@@ -1,0 +1,85 @@
+/* Navbar */
+
+nav {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+.elementWrapper {
+  width: 1fr;
+  background-color: var(--primary-color);
+  color: #fff;
+  display: flex;
+  height: 80px;
+  align-items: center;
+}
+
+.navbarElement {
+  padding: 0 20px;
+  font-size: 1.7rem;
+  color: #eee;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: 600;
+}
+
+.navbarElement:hover {
+  color: white;
+  background-color: #0792a8;
+}
+
+.divideElement {
+  flex-grow: 1;
+  height: 100%;
+}
+
+.navbarElement > a {
+  color: #555;
+}
+
+.hamburgerIcon {
+  display: none;
+}
+
+.selected {
+  color: white;
+}
+
+/* navbar end */
+
+/* Tablet */
+
+@media only screen and (max-width: 992px) {
+  .elementWrapper {
+    flex-direction: column;
+    overflow: hidden;
+    align-items: center;
+  }
+
+  .navbarElement {
+    min-height: 80px;
+  }
+
+  .navbarElement:hover {
+    background-color: var(--primary-color);
+    color: white;
+  }
+
+  .hamburgerIcon {
+    display: inline;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    margin: 0;
+    height: 80px;
+  }
+
+  .verticalElementWrapper {
+    height: 100%;
+  }
+}
+
+/* Mobile */
