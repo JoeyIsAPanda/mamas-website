@@ -1,3 +1,8 @@
+.contentWrapper {
+  display: grid;
+  grid-template-columns: 1fr;
+  overflow: hidden;
+}
 /* Horse Preview */
 
 .horseWrapper {
@@ -10,41 +15,35 @@
   border: solid grey 2px;
   box-shadow: 3px 3px 3px 1px #ccc;
   border-radius: 10px;
-  height: 400px;
+  min-height: 350px;
+}
+.horsePreview > a {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
 }
 .horseProfilePic {
-  position: relative;
-  top: -60px;
   height: 150px;
   border-radius: 10px;
-}
-.right-side img {
-  float: right;
-  right: 50px;
-}
-
-.left-side img {
-  float: left;
-  left: 50px;
+  position: relative;
+  top: -70px;
+  margin: auto;
 }
 
 .nameTag {
-  position: relative;
-}
-
-.left-side .nameTag {
-  float: right;
-  right: 50px;
-  transform: rot;
-}
-
-.right-side .nameTag {
-  float: left;
-  left: 50px;
+  text-align: center;
+  font-size: 2.2rem;
+  grid-column: span 2;
 }
 
 .horseDesc {
-  margin: 150px 5% 5% 5%;
+  margin: 0 5%;
+  font-size: 1.2rem;
+  grid-column: span 2;
+}
+
+.heritage {
+  margin: 0 5%;
+  font-size: 1.2rem;
 }
 
 /* Tablet */
@@ -61,9 +60,25 @@
 
 @media (max-width: 768px) {
   .horsePreview {
-    font-size: 1.5rem;
-
-    margin-left: 10px;
-    margin-right: 10px;
+    margin: 5% 10px 5% 10px;
+  }
+  .horsePreview > a {
+    grid-template-columns: 1fr 1fr;
+    justify-content: center;
+    align-items: center;
+  }
+  .nameTag {
+    grid-column: span 2;
+  }
+  .horseProfilePic {
+    border-radius: 10px;
+    position: static;
+    grid-row-start: 2;
+    align-self: center;
+    justify-self: center;
+  }
+  .horseDesc {
+    grid-column: span 2;
+    grid-row-end: 4;
   }
 }

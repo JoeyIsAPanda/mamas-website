@@ -28,7 +28,8 @@ nav {
 
 .navbarElement:hover {
   color: white;
-  background-color: #0792a8;
+  /* background-color: var(--secondary-color); */
+  font-size: 1.72rem;
 }
 
 .divideElement {
@@ -46,6 +47,7 @@ nav {
 
 .selected {
   color: white;
+  font-size: 1.72rem;
 }
 
 /* navbar end */

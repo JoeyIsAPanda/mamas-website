@@ -4,24 +4,34 @@ import { Link } from "react-router-dom";
 const Landing = () => {
   return (
     <div>
+      <h1>Katja Strerath</h1>
       <div className="background">
-        <h1>Katja Strerath</h1>Lorem ipsum dolor sit amet, consectetur
-        adipisicing elit. Quo non dolor, harum tempore autem impedit atque? A,
-        laborum quisquam quia natus soluta at ducimus repudiandae. Vitae
-        corporis explicabo, obcaecati ratione error, suscipit, cum rerum ea
-        dolorum ex doloremque numquam enim dolore eos eius odio? Minus
-        doloremque magni maiores similique dolores, quas ipsam asperiores
-        corporis eos quo ipsa, aut odit aperiam voluptate autem quibusdam quidem
-        quos tempore eum ad ab voluptates harum! Nostrum vel, sequi possimus
-        iure ab ratione dolore hic excepturi consequatur nam esse quaerat
-        debitis perspiciatis voluptates eos minus at alias natus sed fuga!
+        <div className="overlay">
+          <p className="landing-descriptions">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo non
+            dolor, harum tempore autem impedit atque? A, laborum quisquam quia
+            natus soluta at ducimus repudiandae. Vitae corporis explicabo,
+            obcaecati ratione error, suscipit, cum rerum ea dolorum ex
+            doloremque numquam enim dolore eos eius odio? Minus doloremque magni
+            maiores similique dolores, quas ipsam asperiores corporis eos quo
+            ipsa, aut odit aperiam voluptate autem quibusdam quidem quos tempore
+            eum ad ab voluptates harum! Nostrum vel, sequi possimus iure ab
+            ratione dolore hic excepturi consequatur nam esse quaerat debitis
+            perspiciatis voluptates eos minus at alias natus sed fuga!
+          </p>
+        </div>
       </div>
       <div className="grid-container">
         <div className="grid-col">
           <Link to="/Hundezucht">
             <h1>Jack Russel Terrier Zucht</h1>
           </Link>
-          <p>
+          <img
+            src="https://mamas-website.s3.us-west-000.backblazeb2.com/Hundezucht.jpg"
+            alt=""
+            width="80%"
+          />
+          <p className="landing-descriptions">
             1980 zog der erste Jack Russel bei uns zuhause ein und veränderte
             mein Leben! Die Hündin Daisy kam noch aus Irland zu uns. Im Januar
             1982 bekam sie Ihren ersten Wurf. Eine Hündin „Dolly“ wurde mir von
@@ -33,24 +43,28 @@ const Landing = () => {
             geplant. Auf dem Foto der Wurf von 2019 der elf gesunde Welpen
             hatte.
           </p>
-          <img
-            src="https://mamas-website.s3.us-west-000.backblazeb2.com/Hundezucht.jpg"
-            alt=""
-            height="150px"
-          />
         </div>
 
         <div className="grid-col">
           <Link to="/Reitbetrieb">
             <h1>Reiten</h1>
           </Link>
+          <img
+            src="https://mamas-website.s3.us-west-000.backblazeb2.com/Logo.jpg"
+            height="150px"
+            alt=""
+          />
         </div>
         <div className="grid-col">
           <Link to="/Pferdezucht">
             <h1>Pferdezucht</h1>
           </Link>
-
-          <p>
+          <img
+            src="https://mamas-website.s3.us-west-000.backblazeb2.com/Pferdezucht.jpg"
+            width="80%"
+            alt=""
+          />
+          <p className="landing-descriptions">
             Seit 1978 züchtete mein Vater Warmblüter. Angesteckt von diesem
             „Virus“ hab ich mir 1992 mein erstes Stutfohlen für die Zucht
             gekauft. 1996 kam mein erstes selbstgezüchtetes Fohlen auf die Welt!
@@ -61,11 +75,6 @@ const Landing = () => {
             Stuten werden/wurden alle geritten. Foto: Casablanca S aus eigener
             Zucht in 3.Generation mit HF von Arpeggio
           </p>
-          <img
-            src="https://mamas-website.s3.us-west-000.backblazeb2.com/Casablanca+mit+Fohlen.jpg"
-            height="150px"
-            alt=""
-          />
         </div>
       </div>
     </div>

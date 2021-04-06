@@ -6,16 +6,25 @@ const HorseWrapper = () => {
   const { horseProfiles } = useContext(HorseContext);
   return (
     <div className="horseWrapper">
-      {horseProfiles.map(({ name, image, description }, index) => {
-        return (
-          <HorsePreview
-            odd={index % 2}
-            image={image}
-            name={name}
-            description={description}
-          />
-        );
-      })}
+      {horseProfiles.map(
+        (
+          { name, image, description, birthDate, mother, father, MV },
+          index
+        ) => {
+          return (
+            <HorsePreview
+              odd={index % 2}
+              image={image}
+              name={name}
+              description={description}
+              birthDate={birthDate}
+              mother={mother}
+              father={father}
+              MV={MV}
+            />
+          );
+        }
+      )}
     </div>
   );
 };

@@ -1,10 +1,9 @@
 /* Global Styles */
 :root {
   --primary-color: #17a2b8;
+  --secondary-color: #107683;
   --dark-color: #343a40;
-  --light-color: #f4f4f4;
-  --danger-color: #dc3545;
-  --success-color: #28a745;
+  --light-color: #e0e0e4;
 }
 
 * {
@@ -26,20 +25,25 @@ a {
   display: none;
 }
 
-.contentWrapper {
-  display: grid;
-  grid-template-columns: 1fr;
-  overflow: hidden;
-}
-
 /* Landing */
 
 .background {
+  height: 300px;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
 
-  background-image: url("https://mamas-website.s3.us-west-000.backblazeb2.com/Hundezucht.jpg");
+  background-image: url("https://mamas-website.s3.us-west-000.backblazeb2.com/Banner.jpg");
+  color: white;
+}
+.overlay {
+  height: 300px;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.landing-descriptions {
+  padding: 3%;
+  font-size: 1.2rem;
 }
 
 .grid-container {
@@ -60,6 +64,15 @@ a {
   .grid-container {
     grid-template-columns: 1fr;
   }
+  .overlay {
+    background-color: rgba(0, 0, 0, 0.5);
+  }
 }
 
 /* Mobile */
+
+@media screen and (max-width: 768px) {
+  .landing-descriptions {
+    font-size: 1rem;
+  }
+}
